@@ -1,0 +1,15 @@
+FUNCTION Is_palindrome(str: STRING) : BOOLEAN
+VAR
+    n:INTEGER:=str.lenght;
+    Ispalindrome:BOOLEAN:=false;
+BEGIN
+    if (n=0 or n=1) then
+    Ispalindrome:= true;
+    else_if (str[0]=str[n-1])then
+    Ispalindrome:=Is_palindrome(str.substring(1,n-1));
+    else
+    Ispalindrome:=false;
+    end_if
+    return Ispalindrome;
+
+END
